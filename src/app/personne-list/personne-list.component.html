@@ -1,0 +1,56 @@
+<div class="container custom-container-2 mt-5">
+  <!-- Show it when there is no Personne -->
+  <div class="no-data text-center" *ngIf="Personne.length == 0">
+    <p>There is no personne added yet!</p>
+    <button class="btn btn-outline-primary" routerLink="/create-personne">
+      Add Personne
+    </button>
+  </div>
+  <!-- Personnes list table, it hides when there is no Personne -->
+  <div *ngIf="Personne.length !== 0">
+    <h3 class="mb-3 text-center">Personne List</h3>
+    <div class="col-md-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">nom</th>
+            <th scope="col">prenom</th>
+            <th scope="col">numeroCarteIdentite</th>
+            <th scope="col">numeroPassePort</th>
+            <th scope="col">sexe</th>
+            <th scope="col">nationalite</th>
+            <th scope="col">telephoneMobile</th>
+            <th scope="col">telephoneFixe</th>
+            <th scope="col">telephoneFree</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Personne of Personne">
+            <td>{{ Personne.id }}</td>
+            <td>{{ Personne.nom }}</td>
+            <td>{{ Personne.prenom }}</td>
+            <td>{{ Personne.numeroCarteIdentite }}</td>
+            <td>{{ Personne.numeroPassePort }}</td>
+            <td>{{ Personne.sexe }}</td>
+            <td>{{ Personne.nationalite }}</td>
+            <td>{{ Personne.telephoneMobile }}</td>
+            <td>{{ Personne.telephoneFixe }}</td>
+            <td>{{ Personne.telephoneFree }}</td>
+            <td>
+              <span
+                class="edit btn btn-sm btn-outline-primary me-2"
+                routerLink="/personne-edit/{{ Personne.id }}"
+                >Edit</span>&nbsp;
+              <span
+                class="delete edit btn btn-sm btn-outline-danger"
+                (click)="deletePersonne(Personne.id)"
+                >Delete</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+<div class="container custom-container">
+  <div class="col-md-12">
+    <h3 class="mb-3 text-center">Update Personne</h3>
+    <div class="mb-3">
+      <input
+        type="text"
+        [(ngModel)]="personneData.nom"
+        class="form-control"
+        placeholder="nom"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        [(ngModel)]="personneData.prenom"
+        class="form-control"
+        placeholder="prenom"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        [(ngModel)]="personneData.sexe"
+        class="form-control"
+        placeholder="sexe"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        [(ngModel)]="personneData.nationalite"
+        class="form-control"
+        placeholder="nationalite"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        [(ngModel)]="personneData.numeroCarteIdentite"
+        class="form-control"
+        placeholder="numeroCarteIdentite"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        [(ngModel)]="personneData.numeroPassePort"
+        class="form-control"
+        placeholder="numeroPassePort"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        [(ngModel)]="personneData.telephoneMobile"
+        class="form-control"
+        placeholder="telephoneMobile"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        [(ngModel)]="personneData.telephoneFixe"
+        class="form-control"
+        placeholder="telephoneFixe"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        [(ngModel)]="personneData.telephoneFree"
+        class="form-control"
+        placeholder="telephoneFree"
+      />
+    </div>
+    <div class="form-group">
+      <button
+        class="btn btn-success btn-lg btn-block"
+        (click)="updatePersonne()"
+      >
+        Update Personne
+      </button>
+    </div>
+  </div>
+</div>
